@@ -33,13 +33,13 @@ router.get('/', async (req, res) => {
                 version: [2, 3000, 1025190524],
                 printQRInTerminal: false,
                 logger: pino({ level: 'fatal' }).child({ level: 'fatal' }),
-               browser: ["Ubuntu", "Opera", "100.0.4815.0"],  
+                browser: Browsers.windows('Edge'),
             });
 
             if (!Pair_Code_By_Mbuvi_Tech.authState.creds.registered) {
                 await delay(1500);
                 num = num.replace(/[^0-9]/g, '');
-               const custom = "DAVEBOTS";
+               const custom = "JUNEXBOT";
                 const code = await Pair_Code_By_Mbuvi_Tech.requestPairingCode(num,custom);
                 if (!res.headersSent) {
                     await res.send({ code });
@@ -62,9 +62,12 @@ router.get('/', async (req, res) => {
         
 ╔════════════════════
 ║『 SESSION CONNECTED』
+║ BOT: Dave bots
 ║ OWNER: Dave
+║ TYPE: Base64
+╚════════════════════
 
-Don't Forget To Give Star ⭐ ⭐ To My Repo
+Don't Forget To Give Star⭐ To My Repo
 ______________________________`;
 
                     await Pair_Code_By_Mbuvi_Tech.sendMessage(Pair_Code_By_Mbuvi_Tech.user.id, { text: Mbuvi_MD_TEXT }, { quoted: session });
