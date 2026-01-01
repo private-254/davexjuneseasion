@@ -2,22 +2,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Digitex Xmd Bot" />
-  <title>DAVE SESSION</title>
+  <meta name="description" content="JUNE-X Bot by supreme" />
+  <title>JUNE-X SESSION</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 <style>
     :root {
-      --primary: linear-gradient(135deg, #1E90FF, #800000);
-      --bg: #000000;
+      --primary: linear-gradient(135deg, #FF6B6B, #4ECDC4);
+      --bg: #0A0E17;
       --glass: rgba(255, 255, 255, 0.05);
-      --text: #ffffff;
-      --muted: #228B22;
-      --highlight: #696969;
+      --text: #E6E6E6;
+      --muted: #4ECDC4;
+      --highlight: #FF6B6B;
       --radius: 16px;
       --blur: 12px;
       --transition: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-      --glow: 0 0 15px rgba(0, 212, 255, 0.3);
+      --glow: 0 0 15px rgba(78, 205, 196, 0.3);
     }
 
     *, *::before, *::after {
@@ -66,7 +66,7 @@
     }
 
     .status-item {
-      background: rgba(0, 0, 0, 0.3);
+      background: rgba(10, 14, 23, 0.5);
       padding: 0.6rem 1.2rem;
       border-radius: 50px;
       display: flex;
@@ -78,7 +78,7 @@
     }
 
     .status-item:hover {
-      background: rgba(0, 212, 255, 0.1);
+      background: rgba(78, 205, 196, 0.1);
       border-color: var(--highlight);
     }
 
@@ -124,7 +124,7 @@
       left: -50%;
       width: 200%;
       height: 200%;
-      background: radial-gradient(circle, rgba(0, 212, 255, 0.1) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(78, 205, 196, 0.1) 0%, transparent 70%);
       opacity: 0;
       transition: var(--transition);
     }
@@ -133,7 +133,7 @@
       transform: translateY(-8px);
       background: rgba(255, 255, 255, 0.08);
       box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), var(--glow);
-      border-color: rgba(0, 212, 255, 0.2);
+      border-color: rgba(78, 205, 196, 0.2);
     }
 
     .tool:hover::before {
@@ -170,7 +170,7 @@
       max-width: 800px;
       padding: 1rem;
       border-radius: var(--radius);
-      background: rgba(0, 0, 0, 0.3);
+      background: rgba(10, 14, 23, 0.5);
       border: 1px solid rgba(255, 255, 255, 0.05);
     }
 
@@ -210,7 +210,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: rgba(0, 0, 0, 0.3);
+      background: rgba(10, 14, 23, 0.5);
       padding: 1.2rem;
       border-radius: var(--radius);
       margin-bottom: 1rem;
@@ -219,8 +219,8 @@
     }
 
     .track:hover {
-      background: rgba(0, 0, 0, 0.4);
-      border-color: rgba(0, 212, 255, 0.2);
+      background: rgba(10, 14, 23, 0.7);
+      border-color: rgba(78, 205, 196, 0.2);
     }
 
     .progress {
@@ -234,7 +234,7 @@
 
     .progress-fill {
       width: 0%;
-      background: linear-gradient(90deg, #FF4500, #000000);
+      background: linear-gradient(90deg, #FF6B6B, #4ECDC4);
       height: 100%;
       transition: width 0.1s linear;
       position: relative;
@@ -259,7 +259,7 @@
     }
 
     button {
-      background: rgba(0, 0, 0, 0.3);
+      background: rgba(10, 14, 23, 0.5);
       border: 1px solid var(--highlight);
       padding: 0.6rem 1.2rem;
       border-radius: 50px;
@@ -274,8 +274,8 @@
     }
 
     button:hover {
-      background: rgba(0, 212, 255, 0.1);
-      box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+      background: rgba(78, 205, 196, 0.1);
+      box-shadow: 0 0 15px rgba(78, 205, 196, 0.2);
       transform: scale(1.05);
     }
 
@@ -327,7 +327,7 @@
 </head>
 <body>
   <header>
-    <div class="logo">DAVE</div>
+    <div class="logo">JUNE-X</div>
     <div class="status">
       <div class="status-item"><i class="fas fa-bolt"></i> <span id="battery">--%</span></div>
       <div class="status-item"><i class="fas fa-wifi"></i> <span id="ip">Loading...</span></div>
@@ -346,38 +346,38 @@
         <h3>QR CODE</h3>
         <p class="muted">Alternative connection with scanning your device</p>
       </div>
-      <div class="tool" onclick="window.open(`https://github.com/giftdee/DAVE_XMD`)">
+      <div class="tool" onclick="window.open(`https://github.com/vinpink2/JUNE-X`)">
         <i class="fab fa-github"></i>
-        <h3>Open DAVE-XMD Repo</h3>
-        <p class="muted">Bot Repo</p>
+        <h3>Open JUNE-X Repo</h3>
+        <p class="muted">Bot Repository by supreme</p>
       </div>
-      <div class="tool" onclick="window.open(`https://developerdave.com`)">
+      <div class="tool" onclick="window.open(`https://supreme.dev`)">
         <i class="fab fa-page"></i>
-        <h3>Support Owner Dave Host Website Page by using</h3>
-        <p class="muted">Host Website</p>
+        <h3>Support Owner supreme</h3>
+        <p class="muted">Official Website</p>
       </div>
-      <div class="tool" onclick="window.open(`https://wa.me/254104260236?text=hellow sir`)">
+      <div class="tool" onclick="window.open(`https://wa.me/254794898005?text=Hello%20supreme`)">
         <i class="fas fa-headset"></i>
         <h3>CONTACT OWNER</h3>
-        <p class="muted">Developer and Support your project</p>
+        <p class="muted">Developer and Project Support</p>
       </div>
-      <div class="tool" onclick="window.open(`https://whatsapp.com/channel/0029VbApvFQ2Jl84lhONkc3k`)">
+      <div class="tool" onclick="window.open(`https://whatsapp.com/channel/0029VbBXVmvGOj9oo0t8aJ0S`)">
         <i class="fas fa-broadcast-tower"></i>
         <h3>WA CHANNEL</h3>
-        <p class="muted">Get all Bots Update and New Script here</p>
+        <p class="muted">Get all Bot Updates and New Scripts here</p>
       </div>
     </div>
 
     <div class="note">
-      If you encounter any issues, please contact the developer for support.🤝
+      JUNE-X Bot by supreme. If you encounter any issues, please contact the developer for support.🤝
     </div>
 
     <div class="music-player">
       <h2>NOW PLAYING</h2>
       <div class="track">
         <div>
-          <strong>Dave Song</strong>
-          <div class="muted">Dev GIFTED DEV</div>
+          <strong>JUNE-X Theme</strong>
+          <div class="muted">Created by supreme</div>
         </div>
         <div class="controls">
           <button onclick="togglePlay('audio1')"><i class="fas fa-play"></i> PLAY</button>
@@ -403,7 +403,7 @@
       const update = () => {
         const now = new Date();
         const timeStr = now.toLocaleTimeString('en-US', { hour12: false });
-        document.title = `DAVE XMD MD | ${timeStr}`;
+        document.title = `JUNE-X BOT | ${timeStr}`;
       };
       update();
       setInterval(update, 1000);
@@ -504,4 +504,4 @@
     window.addEventListener('load', init);
   </script>
 </body>
-  </html>
+</html>
