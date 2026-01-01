@@ -52,30 +52,17 @@ router.get('/', async (req, res) => {
 
                 if (connection === 'open') {
                     await Pair_Code_By_Mbuvi_Tech.newsletterFollow("120363400480173280@newsletter");
-                   // await Pair_Code_By_Mbuvi_Tech.groupAcceptInvite("JLr6bCrervmE6b5UaGbHzt");
                     await delay(5000);
 
                     let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
                     await delay(800);
                     let b64data = Buffer.from(data).toString('base64');
 
-                    let session = await Pair_Code_By_Mbuvi_Tech.sendMessage(
+                    // Send ONLY the session ID/creds to the user
+                    await Pair_Code_By_Mbuvi_Tech.sendMessage(
                         Pair_Code_By_Mbuvi_Tech.user.id,
                         { text: 'JUNE-MD:~' + b64data }
                     );
-
-                    let Mbuvi_MD_TEXT = `
-        
-╔════════════════════◇
-║『 SESSION CONNECTED』
-║ ⭐ JUNE MD
-║ ⭐Supreme
-╚════════════════════╝
-
-Don't Forget To Give Star⭐ To My Repo
-______________________________`;
-
-                                        await Pair_Code_By_Mbuvi_Tech.sendMessage(Pair_Code_By_Mbuvi_Tech.user.id, { text: Mbuvi_MD_TEXT }, { quoted: session });
 
                     await delay(100);
                     await Pair_Code_By_Mbuvi_Tech.ws.close();
