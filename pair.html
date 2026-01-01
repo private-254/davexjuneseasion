@@ -3,21 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dave-sessions Pair Dashboard</title>
+  <title>JUNE-X Session Pair Dashboard</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* Your CSS remains exactly the same */
     :root {
-      --primary: linear-gradient(135deg, #FF4500, #228B22);
-      --bg: #D2691E;
+      --primary: linear-gradient(135deg, #FF6B6B, #4ECDC4);
+      --bg: #0A0E17;
       --glass: rgba(255, 255, 255, 0.05);
-      --text: #ffffff;
-      --muted: #708090;
-      --highlight: #FF1493;
+      --text: #E6E6E6;
+      --muted: #4ECDC4;
+      --highlight: #FF6B6B;
       --radius: 16px;
       --blur: 12px;
       --transition: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-      --glow: 0 0 15px rgba(0, 212, 255, 0.3);
+      --glow: 0 0 15px rgba(78, 205, 196, 0.3);
     }
 
     * {
@@ -36,6 +35,7 @@
       overflow-x: hidden;
       color: var(--text);
       padding: 80px 20px 120px;
+      background: var(--bg);
     }
 
     .background-image {
@@ -76,7 +76,7 @@
       width: 40px;
       border-radius: 50%;
       object-fit: cover;
-      border: 2px solid rgba(0, 212, 255, 0.3);
+      border: 2px solid rgba(78, 205, 196, 0.3);
       box-shadow: var(--glow);
     }
 
@@ -90,7 +90,7 @@
     }
 
     .battery-container {
-      background: rgba(0, 0, 0, 0.3);
+      background: rgba(10, 14, 23, 0.5);
       border-radius: 50px;
       padding: 0.5rem 1rem;
       display: flex;
@@ -157,7 +157,7 @@
       padding: 1rem;
       border-radius: var(--radius);
       border: 1px solid rgba(255, 255, 255, 0.1);
-      background: rgba(0, 0, 0, 0.3);
+      background: rgba(10, 14, 23, 0.5);
       color: var(--text);
       font-family: inherit;
       transition: var(--transition);
@@ -166,7 +166,7 @@
     .input-container input:focus {
       outline: none;
       border-color: var(--highlight);
-      box-shadow: 0 0 0 2px rgba(0, 212, 255, 0.2);
+      box-shadow: 0 0 0 2px rgba(78, 205, 196, 0.2);
     }
 
     .input-container button {
@@ -189,7 +189,7 @@
       margin-top: 1.5rem;
       padding: 1rem;
       border-radius: var(--radius);
-      background: rgba(0, 0, 0, 0.3);
+      background: rgba(10, 14, 23, 0.5);
       border: 1px solid rgba(255, 255, 255, 0.1);
       min-height: 60px;
       display: flex;
@@ -198,7 +198,7 @@
     }
 
     #copy-code {
-      background: rgba(0, 0, 0, 0.3);
+      background: rgba(10, 14, 23, 0.5);
       border: 1px solid var(--highlight);
       padding: 0.6rem 1.2rem;
       border-radius: 50px;
@@ -211,8 +211,8 @@
     }
 
     #copy-code:hover {
-      background: rgba(0, 212, 255, 0.1);
-      box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+      background: rgba(78, 205, 196, 0.1);
+      box-shadow: 0 0 15px rgba(78, 205, 196, 0.2);
     }
 
     .music-player {
@@ -305,12 +305,12 @@
   </style>
 </head>
 <body>
-  <img src="https://files.catbox.moe/lidsgj.jpg" alt="makamesco Background" class="background-image">
+  <img src="https://files.catbox.moe/lidsgj.jpg" alt="JUNE-X Background" class="background-image">
 
   <header class="header">
     <div class="logo-container">
-      <img src="https://files.catbox.moe/lidsgj.jpg" alt="makamesco Logo" class="logo-img">
-      <div class="logo-text">Dave tech</div>
+      <img src="https://files.catbox.moe/lidsgj.jpg" alt="JUNE-X Logo" class="logo-img">
+      <div class="logo-text">JUNE-X</div>
     </div>
 
     <div class="battery-container">
@@ -322,7 +322,7 @@
   <div class="main-content">
     <div class="box">
       <h2>PAIRING CODE</h2>
-      <h5>DAVE MD MULTI DEVICE </h5>
+      <h5>JUNE-X MULTI DEVICE BOT</h5>
       <p>Please enter your number with country code</p>
 
       <div class="input-container">
@@ -339,13 +339,13 @@
 
     <div class="music-player">
       <h3>PLAY NOW</h3>
-      <div class="music-title">Dave Song</div>
-      <div class="music-subtitle">by Dev Dave Enjoy</div>
+      <div class="music-title">JUNE-X Theme</div>
+      <div class="music-subtitle">by supreme</div>
       <button class="play-btn" onclick="togglePlay()">
         <i class="fas fa-play" id="play-icon"></i>
       </button>
       <div class="time-display" id="time1">0:00</div>
-      <div class="music-subtitle">jah bless you</div>
+      <div class="music-subtitle">Enjoy the experience</div>
       <audio id="audio1" src="https://files.catbox.moe/wdap4t.mp3" loop></audio>
     </div>
   </div>
@@ -368,8 +368,8 @@
       try {
         await navigator.clipboard.writeText(code);
         copyCodeBtn.innerText = "COPIED!";
-        copyCodeBtn.style.backgroundColor = "#00ff00";
-        copyCodeBtn.style.color = "#000";
+        copyCodeBtn.style.backgroundColor = "#4ECDC4";
+        copyCodeBtn.style.color = "#0A0E17";
         setTimeout(() => {
           copyCodeBtn.innerText = "COPY CODE";
           copyCodeBtn.style.backgroundColor = "";
