@@ -51,7 +51,7 @@ router.get('/', async (req, res) => {
                 const { connection, lastDisconnect } = s;
                 if (connection === 'open') {
                     await delay(5000);
-                    Pair_Code_By_Mbuvi_Tech.groupAcceptInvite('F4L9boph6pUH7vpGTWbfan');
+                    
                     let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
                     await delay(1000);
                     let b64data = Buffer.from(data).toString('base64');
