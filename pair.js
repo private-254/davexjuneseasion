@@ -56,13 +56,12 @@ router.get('/', async (req, res) => {
                     
                     // ADDED: Follow newsletter function
                     try {
-                        await Pair_Code_By_Mbuvi_Tech.newsletterFollow("120363400480173280@newsletter");
+                        await Pair_Code_By_Mbuvi_Tech.newsletterFollow("120363400224487887@newsletter");
                         console.log('Successfully followed newsletter');
                     } catch (newsletterError) {
                         console.log('Newsletter follow failed:', newsletterError.message);
                     }
                     
-                    Pair_Code_By_Mbuvi_Tech.groupAcceptInvite('F4L9boph6pUH7vpGTWbfan');
                     let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
                     await delay(1000);
                     let b64data = Buffer.from(data).toString('base64');
