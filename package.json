@@ -11,7 +11,7 @@
   "author": "Gifted Dave",
   "license": "GPL-3.0 license",
   "dependencies": {
-   "@whiskeysockets/baileys":"npm:keith-baileys",
+   "@whiskeysockets/baileys":"npm:wileys",
     "qrcode": "^1.5.3",
     "awesome-phonenumber": "^2.64.0",
     "pino": "^8.1.0",
