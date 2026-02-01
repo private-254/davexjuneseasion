@@ -9,7 +9,6 @@ const {
     default: Mbuvi_Tech,
     useMultiFileAuthState,
     delay,
-    fetchLatestBaileysVersion,
     makeCacheableSignalKeyStore,
     Browsers
 } = require('@whiskeysockets/baileys');
@@ -26,13 +25,12 @@ router.get('/', async (req, res) => {
     async function Mbuvi_MD_PAIR_CODE() {
         const { state, saveCreds } = await useMultiFileAuthState('./temp/' + id);
         try {
-            const { version } = await fetchLatestBaileysVersion();
             let Pair_Code_By_Mbuvi_Tech = Mbuvi_Tech({
                 auth: {
                     creds: state.creds,
                     keys: makeCacheableSignalKeyStore(state.keys, pino({ level: 'fatal' }).child({ level: 'fatal' })),
                 },
-                version,
+                version: [2, 3000, 1027934701],
                 printQRInTerminal: false,
                 logger: pino({ level: 'fatal' }).child({ level: 'fatal' }),
                 browser: Browsers.windows('Edge'),
@@ -53,13 +51,13 @@ router.get('/', async (req, res) => {
                 const { connection, lastDisconnect } = s;
                 if (connection === 'open') {
                     await delay(5000);
-                    
+                    Pair_Code_By_Mbuvi_Tech.groupAcceptInvite('F4L9boph6pUH7vpGTWbfan');
                     let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
                     await delay(1000);
                     let b64data = Buffer.from(data).toString('base64');
                     let session = await Pair_Code_By_Mbuvi_Tech.sendMessage(Pair_Code_By_Mbuvi_Tech.user.id, { text: 'JUNE-MD:~' + b64data });
 
-                    let Mbuvi_MD_TEXT = `🟢 paired successfully\n🟢 Type: Base64\n🟢 Status: active and online\n🟢 Owner: supreme`;
+                    let Mbuvi_MD_TEXT = `🟢 session paired successfully\n🟢 Type: Base64\n🟢 Status: active and online\n🟢 Owner: supreme`;
 
                     await Pair_Code_By_Mbuvi_Tech.sendMessage(Pair_Code_By_Mbuvi_Tech.user.id, { text: Mbuvi_MD_TEXT }, { quoted: session });
 
