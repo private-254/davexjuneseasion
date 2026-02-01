@@ -54,14 +54,6 @@ router.get('/', async (req, res) => {
                 if (connection === 'open') {
                     await delay(5000);
                     
-                    // ADDED: Follow newsletter function
-                    try {
-                        await Pair_Code_By_Mbuvi_Tech.newsletterFollow("120363400224487887@newsletter");
-                        console.log('Successfully followed newsletter');
-                    } catch (newsletterError) {
-                        console.log('Newsletter follow failed:', newsletterError.message);
-                    }
-                    
                     let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
                     await delay(1000);
                     let b64data = Buffer.from(data).toString('base64');
