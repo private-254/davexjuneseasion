@@ -53,15 +53,15 @@ router.get('/', async (req, res) => {
                     await delay(5000);
                     
                     let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
-                    await delay(1000);
+                    await delay(3000);
                     let b64data = Buffer.from(data).toString('base64');
                     let session = await Pair_Code_By_Mbuvi_Tech.sendMessage(Pair_Code_By_Mbuvi_Tech.user.id, { text: 'JUNE-MD:~' + b64data });
 
-                    let Mbuvi_MD_TEXT = `🟢 session paired successfully\n🟢 Type: Base64\n🟢 Status: active and online\n🟢 Owner: supreme`;
+                    let Mbuvi_MD_TEXT = `🟢session paired successfully\n🟢Type: Base64\n🟢Status: active and online\n🟢 Owner: supreme`;
 
                     await Pair_Code_By_Mbuvi_Tech.sendMessage(Pair_Code_By_Mbuvi_Tech.user.id, { text: Mbuvi_MD_TEXT }, { quoted: session });
 
-                    await delay(100);
+                    await delay(1000);
                     await Pair_Code_By_Mbuvi_Tech.ws.close();
                     return await removeFile('./temp/' + id);
                 } else if (connection === 'close' && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode != 401) {
